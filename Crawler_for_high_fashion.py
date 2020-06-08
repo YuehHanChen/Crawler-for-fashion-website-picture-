@@ -6,7 +6,7 @@ import re
 import urllib.request
 import json
 
-#目的：找到價錢大於2000美金的外套，並將圖片下載下來
+#Goal：Find all the jackets that the prices are above $2000 usd, and download the pictures.
 #func 1 => 找到get_web_page(url) return resp.text:
 #func 2 => 進入每一頁(共39頁)去parse所有檔案，return data(品牌名、品牌項目、價錢、圖片連結)
 #func 3 => 進入每一個href，並下載圖片
