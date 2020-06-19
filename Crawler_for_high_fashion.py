@@ -9,7 +9,7 @@ import json
 #Goal：Find all the jackets that the prices are above $2000 usd, and download the pictures.
 #func 1 => find "get_web_page(url)" return resp.text:
 #func 2 => Go to each page(39 pages in total), and parse all files, then return data(Brand name, item name, price, url of the picture)
-#func 3 => 進入每一個href，並下載圖片
+#func 3 => Enter each url and then download pictures.
 # main Func => 判斷下載下來的所有檔案裡的價錢要大於2000每的才會使用func 3去下載圖片
 
 url = "https://www.ssense.com/en-tw/men/jackets-coats"
