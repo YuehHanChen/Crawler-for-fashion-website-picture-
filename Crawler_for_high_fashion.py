@@ -10,7 +10,7 @@ import json
 #func 1 => find "get_web_page(url)" return resp.text:
 #func 2 => Go to each page(39 pages in total), and parse all files, then return data(Brand name, item name, price, url of the picture)
 #func 3 => Enter each url and then download pictures.
-# main Func => 判斷下載下來的所有檔案裡的價錢要大於2000每的才會使用func 3去下載圖片
+# main Func => Determine whether the price is above $2000, if so, then func 3 to download the picture
 
 url = "https://www.ssense.com/en-tw/men/jackets-coats"
 
@@ -56,7 +56,7 @@ def enter_every_page(dom):
                 })
     return items
 
-def save(img_url, title):  #下載連結
+def save(img_url, title):  #Download the link
     if img_url:
         try:
             dname = title.strip()  # 用 strip() 去除字串前後的空白
