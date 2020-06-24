@@ -59,10 +59,10 @@ def enter_every_page(dom):
 def save(img_url, title):  #Download the link
     if img_url:
         try:
-            dname = title.strip()  # 用 strip() 去除字串前後的空白
+            dname = title.strip()  # 用 strip() delete the blank in front of or in the back of the string
             if not os.path.exists(dname):
                 os.makedirs(dname)
-            fname = img_url.split('/')[-1]  # 將網址的最後的名稱設為檔案名稱
+            fname = img_url.split('/')[-1]  # set last string of url as file name
             urllib.request.urlretrieve(img_url, os.path.join(dname, fname))
                     #使用urllib.request.urlretrieve(檔案夾名, 檔案名)這個func把圖片下載下來到資料夾裡
         except Exception as e:
