@@ -64,7 +64,7 @@ def save(img_url, title):  #Download the link
                 os.makedirs(dname)
             fname = img_url.split('/')[-1]  # set last string of url as file name
             urllib.request.urlretrieve(img_url, os.path.join(dname, fname))
-                    #使用urllib.request.urlretrieve(檔案夾名, 檔案名)這個func把圖片下載下來到資料夾裡
+                    #使用urllib.request.urlretrieve(documentname, filename)這個func把圖片下載下來到資料夾裡
         except Exception as e:
             print(e)
 
