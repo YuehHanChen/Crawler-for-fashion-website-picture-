@@ -59,12 +59,12 @@ def enter_every_page(dom):
 def save(img_url, title):  #Download the link
     if img_url:
         try:
-            dname = title.strip()  # 用 strip() delete the blank in front of or in the back of the string
+            dname = title.strip()  # use strip() to delete the blank in front of or in the back of the string
             if not os.path.exists(dname):
                 os.makedirs(dname)
             fname = img_url.split('/')[-1]  # set last string of url as file name
             urllib.request.urlretrieve(img_url, os.path.join(dname, fname))
-                    #使用urllib.request.urlretrieve(documentname, filename)這個func把圖片下載下來到資料夾裡
+                    # use urllib.request.urlretrieve(documentname, filename) to download pics into files.
         except Exception as e:
             print(e)
 
